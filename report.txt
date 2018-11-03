@@ -1,0 +1,24 @@
+Algorithm:
+	I have implemented a simple DQN algorithm to solve this task in 500 episodes using experience replay.
+	We take game state vector from Unity Agent as input.
+	States: vector of size 37
+	Actions: 4(forward, backward, left, right)
+	No of episodes to train: 500
+	Starting epsilion: 1.0, Ending epsilion: 0.01, Epsilion decay rate: 0.99
+
+Average Scores across episodes:
+	Episode 100	Average Score: 1.42
+	Episode 200	Average Score: 6.89
+	Episode 300	Average Score: 10.38
+	Episode 400	Average Score: 12.70
+	Episode 500	Average Score: 14.86
+
+Deep Q Network Dimension:
+	First Layer: input: 37(no. of states)	output: 32			activation: relu
+	Second Layer: input: 32			output: 32			activation: relu
+	Final Layer: input: 32			output: 4(no. of actions)
+
+Most of the learning algorithm is kept similar to the exercise project, i have done few changes to hyperparameters. I found that 500 episodes is enough to make agent learn and make an average score of 13 for 200 continuous episodes.
+
+Future Work:
+	I can try to implement other algorithms like Double DQN, Dueling DQN with Prioritized Experience Replay
